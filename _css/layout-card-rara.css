@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2B3D41;
+    
+
+}
+html{
+    width: 60vw;
+    height: 75vh;
+}
+.main-content {
+    width: 100vw    ;
+    height: 100%;
+    background-color: #b2ff37;
+}
+.main-content-section-bigimage{
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 64px;}
+
+.main-content-section-bigimage img{
+    max-width:100% ;
+    border-radius: 8px 8px 0px 0px;
+    margin: 0 auto 5px;
+}
+.bio-specs{
+    display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around ;
+    gap: .25%;
+}

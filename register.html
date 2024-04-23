@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuário</title>
+</head>
+<body>
+    <h1>Registro de Usuário</h1>
+    <form action="./PHP/register.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">Email:</label> <!-- Novo campo para o e-mail -->
+        <input type="email" id="email" name="email" required><br> <!-- Novo campo para o e-mail -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>

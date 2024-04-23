@@ -1,0 +1,1248 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+Body {
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	background-color: rgba(0, 0, 0, 1.0);
+	overflow-x: hidden;
+	display: flex;
+}
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 48px;
+	position: fixed;
+	width: 100%;
+	height: 200px;
+	background-color: rgb(1, 1, 1);
+	border-color: rgb(30, 30, 30);
+	border-style: solid;
+	border-width: 3px;
+}
+
+.logo {
+	width: 400px;
+	height: 160px;
+}
+
+
+div#picks {
+	margin: 48px 5px;
+	margin-top: 210px;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	float: left;
+	width: 1900px;
+	height: 200px;
+	padding: 5px;
+	list-style: none;
+	justify-content: center;
+}
+
+* div#picks div {
+	width: 230px;
+	height: 500px;
+	margin: 10px;
+	margin-left: 25px;
+	border: 2px solid whitesmoke;
+	background-color: #ffffff;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+	text-align: center;
+	font-size: 25px;
+	
+}
+
+* div#picks div h1{
+margin-top:400px;
+}
+
+div#picks a {
+	color: white;
+	text-decoration: none;
+	transition: opacity 1s;
+}
+
+div#picks a:hover {
+	color: rgba(200, 200, 200, 1.0);
+	text-decoration: underline;
+}
+
+div#picks div:hover {
+	transform: scale(1.2);
+	transition: all .3s ease-in;
+}
+
+div#picks div:hover span {
+	opacity: 1;
+}
+
+div#picks div#Mord {
+	background: url("../_imagens/Mord.jpg") no-repeat;
+	background-position: 60% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Aatrox {
+	background: url("../_imagens/Aatrox.jpg") no-repeat;
+
+}
+
+div#picks div#Ahri {
+	background: url("../_imagens/Ahri.jpg") no-repeat;
+	background-position: 40% 15%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Akali {
+	background: url("../_imagens/Akali.jpg") no-repeat;
+	background-position: 40% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Akshan {
+	background: url("../_imagens/Akshan.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Alistar {
+	background: url("../_imagens/Alistar.jpg") no-repeat;
+	background-position: 60% 40%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Amumu {
+	background: url("../_imagens/Amumu.jpg") no-repeat;
+	background-position: 90% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Anivia {
+	background: url("../_imagens/Anivia.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Annie {
+	background: url("../_imagens/Annie.jpg") no-repeat;
+	background-position: 50% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Aphelios {
+	background: url("../_imagens/Aphelios.jpg") no-repeat;
+	background-position: 60% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ashe {
+	background: url("../_imagens/Ashe.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Aurelion {
+	background: url("../_imagens/Aurelion.jpg") no-repeat;
+	background-position: 70% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+}
+
+div#picks div#Azir {
+	background: url("../_imagens/Azir.jpg") no-repeat;
+	background-position: 99% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Bardo {
+	background: url("../_imagens/Bardo.jpg") no-repeat;
+	background-position: 80% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Bel {
+	background: url("../_imagens/Bel.jpg") no-repeat;
+	background-position: 40% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Blitzcrank {
+	background: url("../_imagens/Blitzcrank.jpg") no-repeat;
+	background-position: 50% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+
+}
+
+div#picks div#Brand {
+	background: url("../_imagens/Brand.jpg") no-repeat;
+	background-position: 99% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Braum {
+	background: url("../_imagens/Braum.jpg") no-repeat;
+	background-position: 60% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Caitlyn {
+	background: url("../_imagens/Caitlyn.jpg") no-repeat;
+	background-position: 50% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Camille {
+	background: url("../_imagens/Camille.jpg") no-repeat;
+	background-position: 90% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Cassiopeia {
+	background: url("../_imagens/Cassiopeia.jpg") no-repeat;
+	background-position: 15% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+
+}
+
+div#picks div#Cho {
+	background: url("../_imagens/Cho.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Corki {
+	background: url("../_imagens/Corki.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Darius {
+	background: url("../_imagens/Darius.jpg") no-repeat;
+	background-position: 40% 5%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Diana {
+	background: url("../_imagens/Diana.jpg") no-repeat;
+	background-position: 70% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Mundo {
+	background: url("../_imagens/Mundo.jpg") no-repeat;
+	background-position: 35% 2%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Draven {
+	background: url("../_imagens/Draven.jpg") no-repeat;
+	background-position: 20% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ekko {
+	background: url("../_imagens/Ekko.jpg") no-repeat;
+	background-position: 50% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Elise {
+	background: url("../_imagens/Elise.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Evelynn {
+	background: url("../_imagens/Evelynn.jpg") no-repeat;
+	background-position: 50% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ez {
+	background: url("../_imagens/Ez.jpg") no-repeat;
+	background-position: 40% 25%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Fiddle {
+	background: url("../_imagens/Fiddle.jpg") no-repeat;
+	background-position: 60% 60%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+
+}
+
+div#picks div#Fiora {
+	background: url("../_imagens/Fiora.jpg") no-repeat;
+	background-position: 50% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Fizz {
+	background: url("../_imagens/Fizz.jpg") no-repeat;
+	background-position: 90% 15%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Galio {
+	background: url("../_imagens/Galio.jpg") no-repeat;
+	background-position: 60% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Gp {
+	background: url("../_imagens/Gp.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+
+}
+
+div#picks div#Garen {
+	background: url("../_imagens/Garen.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Gnar {
+	background: url("../_imagens/Gnar.jpg") no-repeat;
+	background-position: 60% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Gragas {
+	background: url("../_imagens/Gragas.jpg") no-repeat;
+	background-position: 40% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Graves {
+	background: url("../_imagens/Graves.jpg") no-repeat;
+	background-position: 99% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Gwen {
+	background: url("../_imagens/Gwen.jpg") no-repeat;
+	background-position: 70% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Hecarim {
+	background: url("../_imagens/Hecarim.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Heimerdinger {
+	background: url("../_imagens/Heimerdinger.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size: 12pt;
+}
+
+div#picks div#Illaoi {
+	background: url("../_imagens/Illaoi.jpg") no-repeat;
+	background-position: 30% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Irelia {
+	background: url("../_imagens/Irelia.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ivern {
+	background: url("../_imagens/Ivern.jpg") no-repeat;
+	background-position: 70% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Janna {
+	background: url("../_imagens/Janna.jpg") no-repeat;
+	background-position: 99% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Jarvan {
+	background: url("../_imagens/Jarvan.jpg") no-repeat;
+	background-position: 60% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Jax {
+	background: url("../_imagens/Jax.jpg") no-repeat;
+	background-position: 90% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Jayce {
+	background: url("../_imagens/jayce.jpg") no-repeat;
+	background-position: 90% 70%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Jhin {
+	background: url("../_imagens/Jhin.jpg") no-repeat;
+	background-position:99% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Jinx {
+	background: url("../_imagens/jinx.jpg") no-repeat;
+	background-position: 10% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#K {
+	background: url("../_imagens/K.jpg") no-repeat;
+	background-position: 10% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kai {
+	background: url("../_imagens/Kai.jpg") no-repeat;
+	background-position: 70% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kalista {
+	background: url("../_imagens/Kalista.jpg") no-repeat;
+	background-position: 1% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Karma {
+	background: url("../_imagens/Karma.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Karthus {
+	background: url("../_imagens/Karthus.jpg") no-repeat;
+	background-position: 90% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kassadin {
+	background: url("../_imagens/Kassadin.jpg") no-repeat;
+	background-position: 50% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Katarina {
+	background: url("../_imagens/Katarina.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kayle {
+	background: url("../_imagens/Kayle.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kayn {
+	background: url("../_imagens/Kayn.jpg") no-repeat;
+	background-position: 40% 99%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kennen {
+	background: url("../_imagens/Kennen.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zix {
+	background: url("../_imagens/Zix.jpg") no-repeat;
+	background-position: 70% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kindred {
+	background: url("../_imagens/Kindred.jpg") no-repeat;
+	background-position: 1% 40%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kled {
+	background: url("../_imagens/Kled.jpg") no-repeat;
+	background-position: 70% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Kog {
+	background: url("../_imagens/Kog.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lb {
+	background: url("../_imagens/Lb.jpg") no-repeat;
+	background-position: 30% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lee {
+	background: url("../_imagens/Lee.jpg") no-repeat;
+	background-position: 1% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Leona {
+	background: url("../_imagens/Leona.jpg") no-repeat;
+	background-position: 30% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lillia {
+	background: url("../_imagens/Lillia.jpg") no-repeat;
+	background-position: 10% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lissandra {
+	background: url("../_imagens/Lissandra.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+
+}
+
+div#picks div#Lucian {
+	background: url("../_imagens/Lucian.jpg") no-repeat;
+	background-position: 40% 80%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lulu {
+	background: url("../_imagens/Lulu.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Lux {
+	background: url("../_imagens/Lux.jpg") no-repeat;
+	background-position: 50% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Malphite {
+	background: url("../_imagens/Malphite.jpg") no-repeat;
+	background-position: 50% 70%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Malzahar {
+	background: url("../_imagens/Malzahar.jpg") no-repeat;
+	background-position: 60% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Maokai {
+	background: url("../_imagens/Maokai.jpg") no-repeat;
+	background-position: 10% 40%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Yi {
+	background: url("../_imagens/Yi.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Mf {
+	background: url("../_imagens/Mf.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Morgana {
+	background: url("../_imagens/Morgana.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nami {
+	background: url("../_imagens/Nami.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nasus {
+	background: url("../_imagens/Nasus.jpg") no-repeat;
+	background-position: 70% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nautilus {
+	background: url("../_imagens/Nautilus.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Neeko {
+	background: url("../_imagens/Neeko.jpg") no-repeat;
+	background-position: 60% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nidalee {
+	background: url("../_imagens/Nidalee.jpg") no-repeat;
+	background-position: 60% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nilah {
+	background: url("../_imagens/Nilah.jpg") no-repeat;
+	background-position: 20% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Noc {
+	background: url("../_imagens/Noc.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Nunu {
+	background: url("../_imagens/Nunu.jpg") no-repeat;
+	background-position: 80% 80%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Olaf {
+	background: url("../_imagens/Olaf.jpg") no-repeat;
+	background-position: 50% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Orianna {
+	background: url("../_imagens/Orianna.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ornn {
+	background: url("../_imagens/Ornn.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Phantheon {
+	background: url("../_imagens/Phantheon.jpg") no-repeat;
+	background-position: 20% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+}
+
+div#picks div#Poppy {
+	background: url("../_imagens/Poppy.jpg") no-repeat;
+	background-position: 70% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Pyke {
+	background: url("../_imagens/Pyke.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Qiyana {
+	background: url("../_imagens/Qiyana.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Quinn {
+	background: url("../_imagens/Quinn.jpg") no-repeat;
+	background-position: 70% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rakan {
+	background: url("../_imagens/Rakan.jpg") no-repeat;
+	background-position: 1% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rammus {
+	background: url("../_imagens/Rammus.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rek {
+	background: url("../_imagens/Rek.jpg") no-repeat;
+	background-position: 1% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rell {
+	background: url("../_imagens/Rell.jpg") no-repeat;
+	background-position: 1% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Renata {
+	background: url("../_imagens/Renata.jpg") no-repeat;
+	background-position: 1% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+}
+
+div#picks div#Renekton {
+	background: url("../_imagens/Renekton.jpg") no-repeat;
+	background-position: 20% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rengar {
+	background: url("../_imagens/Rengar.jpg") no-repeat;
+	background-position: 99% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Riven {
+	background: url("../_imagens/Riven.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Rumble {
+	background: url("../_imagens/Rumble.jpg") no-repeat;
+	background-position: 90% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ryze {
+	background: url("../_imagens/Ryze.jpg") no-repeat;
+	background-position: 99% 70%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Samira {
+	background: url("../_imagens/Samira.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Sejuani {
+	background: url("../_imagens/Sejuani.jpg") no-repeat;
+	background-position: 30% 2%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Senna {
+	background: url("../_imagens/Senna.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Seraphine {
+	background: url("../_imagens/Seraphine.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:16pt ;
+}
+
+div#picks div#Sett {
+	background: url("../_imagens/Sett.jpg") no-repeat;
+	background-position: 50% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Shaco {
+	background: url("../_imagens/Shaco.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Shen {
+	background: url("../_imagens/Shen.jpg") no-repeat;
+	background-position: 60% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Shyvana {
+	background: url("../_imagens/Shyvana.jpg") no-repeat;
+	background-position: 20% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Singed {
+	background: url("../_imagens/Singed.jpg") no-repeat;
+	background-position: 80% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Sion {
+	background: url("../_imagens/Sion.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Sivir {
+	background: url("../_imagens/Sivir.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Skarner {
+	background: url("../_imagens/Skarner.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Sona {
+	background: url("../_imagens/Sona.jpg") no-repeat;
+	background-position: 10% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Soraka {
+	background: url("../_imagens/Soraka.jpg") no-repeat;
+	background-position: 40% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Swain {
+	background: url("../_imagens/Swain.jpg") no-repeat;
+	background-position: 80% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Sylas {
+	background: url("../_imagens/Sylas.jpg") no-repeat;
+	background-position: 60% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Syndra {
+	background: url("../_imagens/Syndra.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Tk {
+	background: url("../_imagens/Tk.jpg") no-repeat;
+	background-position: 10% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Taliyah {
+	background: url("../_imagens/Taliyah.jpg") no-repeat;
+	background-position: 80% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Talon {
+	background: url("../_imagens/Talon.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Taric {
+	background: url("../_imagens/Taric.jpg") no-repeat;
+	background-position: 80% 2%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Teemo {
+	background: url("../_imagens/Teemo.jpg") no-repeat;
+	background-position: 40% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Thresh {
+	background: url("../_imagens/Thresh.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Tristana {
+	background: url("../_imagens/Tristana.jpg") no-repeat;
+	background-position: 70% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Trundle {
+	background: url("../_imagens/Trundle.jpg") no-repeat;
+	background-position: 1% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Tryndamere {
+	background: url("../_imagens/Tryndamere.jpg") no-repeat;
+	background-position: 20% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Tf {
+	background: url("../_imagens/Tf.jpg") no-repeat;
+	background-position: 70% 20%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+	font-size:14pt ;
+}
+
+div#picks div#Twitch {
+	background: url("../_imagens/Twitch.jpg") no-repeat;
+	background-position: 99% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Urgot {
+	background: url("../_imagens/Urgot.jpg") no-repeat;
+	background-position: 60% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Udyr {
+	background: url("../_imagens/Udyr.jpg") no-repeat;
+	background-position: 99% 2%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Varus {
+	background: url("../_imagens/Varus.jpg") no-repeat;
+	background-position: 90% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Vayne {
+	background: url("../_imagens/Vayne.jpg") no-repeat;
+	background-position: 99% 2%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Veigar {
+	background: url("../_imagens/Veigar.jpg") no-repeat;
+	background-position: 60% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Vel {
+	background: url("../_imagens/Vel.jpg") no-repeat;
+	background-position: 60% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Vex {
+	background: url("../_imagens/Vex.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Vi {
+	background: url("../_imagens/Vi.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Viego {
+	background: url("../_imagens/Viego.jpg") no-repeat;
+	background-position: 99% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Viktor {
+	background: url("../_imagens/Viktor.jpg") no-repeat;
+	background-position: 20% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Vladimir {
+	background: url("../_imagens/Vladimir.jpg") no-repeat;
+	background-position: 99% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Volibear {
+	background: url("../_imagens/Volibear.jpg") no-repeat;
+	background-position: 20% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ww {
+	background: url("../_imagens/Ww.jpg") no-repeat;
+	background-position: 99% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Xayah {
+	background: url("../_imagens/Xayah.jpg") no-repeat;
+	background-position: 20% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Wukong {
+	background: url("../_imagens/Wukong.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Xerath {
+	background: url("../_imagens/Xerath.jpg") no-repeat;
+	background-position: 40% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Xin {
+	background: url("../_imagens/Xin.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Yasuo {
+	background: url("../_imagens/Yasuo.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Yone {
+	background: url("../_imagens/Yone.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Yorick {
+	background: url("../_imagens/Yorick.jpg") no-repeat;
+	background-position: 40% 10%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Yummi {
+	background: url("../_imagens/Yummi.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zac {
+	background: url("../_imagens/Zac.jpg") no-repeat;
+	background-position: 80% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zed {
+	background: url("../_imagens/Zed.jpg") no-repeat;
+	background-position: 10% 1%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zeri {
+	background: url("../_imagens/Zeri.jpg") no-repeat;
+	background-position: 60% 30%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Ziggs {
+	background: url("../_imagens/Ziggs.jpg") no-repeat;
+	background-position: 1% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zilean {
+	background: url("../_imagens/Zilean.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zoe {
+	background: url("../_imagens/Zoe.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+
+div#picks div#Zyra {
+	background: url("../_imagens/Zyra.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: whitesmoke;
+}
+div#picks div#nenhum {
+	background: url("../_imagens/nenhum.jpg") no-repeat;
+	background-position: 40% 50%;
+	background-size: 400px 700px;
+	background-color: rgb(0, 0, 0);
+}

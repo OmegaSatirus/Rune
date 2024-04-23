@@ -1,0 +1,14 @@
+Primary:#2B3D41
+Secondary:#415156
+
+Light:#D7DAE5
+Secondary-Light:#83A0A0
+
+Sucess:#C2F261
+Alert:#F2F230
+Secondary-Alert:#FF5714
+Error:#F42C04
+
+
+
+

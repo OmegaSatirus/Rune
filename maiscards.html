@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Baús</title>
+    <link rel="stylesheet" href="./_css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="AlinhadoArd FlexH">
+        <div>
+            <a href="./cards.html">Cards</a>
+        </div>
+        <div>
+            <a href="./jogos.html">+ moeadas</a>
+        </div>
+        <div>
+            <a href="./index.html"><img Id="logo" src="_assests/league-of-legends.svg"
+                    alt="Logo League of Legends" /></a>
+        </div>
+        <div>
+            <a href="./perfil.html">perfil</a>
+        </div>
+        <div>
+            <a href="./MyCards.html">Meus Cards</a>
+        </div>
+    </header>
+    <main class="AlinhadoArd FlexV">
+        <div class="FlexH">
+            <div>
+                
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div class="container AlinhadoCen">
+            <div class="chest" data-id="comum">
+                Baú Comum (5 cartas, máximo raro)
+                <div class="options">
+                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício')">Dinheiro Fictício</button>
+                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
+                        Comprado</button>
+                </div>
+            </div>
+            <div class="chest" data-id="epico">
+                Baú Épico (8 cartas, máximo épico)
+                <div class="options">
+                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício')">Dinheiro Fictício</button>
+                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
+                        Comprado</button>
+                </div>
+            </div>
+            <div class="chest" data-id="lendario">
+                Baú Lendário (15 cartas, sem raridade máxima)
+                <div class="options">
+                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício')">Dinheiro Fictício</button>
+                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
+                        Comprado</button>
+                </div>
+            </div>
+        </div>
+        <div class="FlexH AlinhadoArd">
+            <div class="cartas-recebidas AlinhadoCen FlexV">
+                <h2>Cartas Recebidas:</h2>
+                <div id="comum-cards" class="hidden"></div>
+                <div id="epico-cards" class="hidden"></div>
+                <div id="lendario-cards" class="hidden"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function confirmAndOpenChest(bauType, moneyType) {
+            const confirmation = confirm(
+                `Você está prestes a abrir o baú ${bauType} com ${moneyType}. Deseja continuar?`);
+            if (confirmation) {
+                openChest(bauType);
+            }
+        }
+
+        function openChest(bauType) {
+            hideAllChests();
+            let numCards, maxRarity;
+
+            switch (bauType) {
+                case 'comum':
+                    numCards = 5;
+                    maxRarity = 'rara';
+                    break;
+                case 'epico':
+                    numCards = 8;
+                    maxRarity = 'epica';
+                    break;
+                case 'lendario':
+                    numCards = 15;
+                    break;
+                default:
+                    return;
+            }
+
+            const cardDiv = document.getElementById(`${bauType}-cards`);
+            cardDiv.classList.remove('hidden');
+            cardDiv.innerHTML = '';
+
+            const rarities = ['comuns', 'incomuns', 'rara', 'epica', 'lendaria', 'mitica'];
+            const difficulty = ['Muito fácil', 'Fácil', 'Médio', 'Médio difícil', 'Difícil', 'Muito difícil'];
+
+            let hasMythical = false; // Flag para verificar se já geramos uma carta mítica
+
+            for (let i = 0; i < numCards; i++) {
+                let rarityIndex;
+                if (bauType === 'lendario' || hasMythical) {
+                    rarityIndex = Math.floor(Math.random() * rarities.length);
+                } else {
+                    rarityIndex = Math.floor(Math.random() * (rarities.indexOf(maxRarity) + 1));
+                }
+
+                const rarity = rarities[rarityIndex];
+                const difficultyLevel = difficulty[rarityIndex];
+
+                if (rarity === 'mitica') {
+                    if (hasMythical) continue; // Se já geramos uma carta mítica, pule para a próxima iteração
+                    hasMythical = true;
+                }
+
+                const iframe = document.createElement('iframe');
+                const maxCardNumber = getMaxCardNumber(rarity);
+                const randomCardNumber = Math.floor(Math.random() * maxCardNumber);
+                iframe.src = `./cards/${rarity}/${randomCardNumber}.html`;
+                cardDiv.appendChild(iframe);
+            }
+        }
+
+        function getMaxCardNumber(rarity) {
+            switch (rarity) {
+                case 'comuns':
+                    return 11;
+                case 'incomuns':
+                    return 5;
+                case 'rara':
+                    return 5;
+                case 'epica':
+                    return 5;
+                case 'lendaria':
+                    return 3;
+                case 'mitica':
+                    return 1;
+                default:
+                    return 1;
+            }
+        }
+
+        function hideAllChests() {
+            const chests = document.querySelectorAll('.cartas-recebidas div');
+            chests.forEach(chest => {
+                chest.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
