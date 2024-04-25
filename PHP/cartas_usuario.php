@@ -4,7 +4,7 @@ session_start();
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.html");
+    header("Location: ../login.html");
     exit();
 }
 
@@ -77,115 +77,125 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartas do Usuário</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .cartao {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .cartao iframe {
-            width: 200px;
-            height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="../_css/style.css">
+    <header class="AlinhadoArd FlexH">
+        <div>
+            <a href="../jogos.html"><img Id="logo" src="../_assests/league-of-legends.svg"
+                    alt="Logo League of Legends" /></a>
+        </div>
+        <div>
+            <a href="../cards.html">Cards</a>
+        </div>
+        <div>
+            <a href="../maiscards.html">+ cards</a>
+        </div>
+        <div>
+            <a href="../PHP/cartas_usuario.php">Meus Cards</a>
+        </div>
+        <div>
+            <a href="../PHP/perfil.php">perfil</a>
+        </div>
+    </header>
 </head>
 
 <body>
-    <h1>Cartas do Usuário</h1>
+    <main class="AlinhadoCen FlexV main-content-section">
 
-    <h2>Montes de Cartas</h2>
-    <div>
-        <h3>Comuns</h3>
-        <p>Quantidade: <?php echo $comuns; ?></p>
-        <?php
-        // Exibe as cartas comuns do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 5) == "comum") {
-                $card_number = substr($carta, 5); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/comuns/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
-            }
-        }
-        ?>
+        <h1>Cartas do Usuário</h1>
 
-        <h3>Incomuns</h3>
-        <p>Quantidade: <?php echo $incomuns; ?></p>
-        <?php
-        // Exibe as cartas incomuns do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 8) == "incomum") {
-                $card_number = substr($carta, 8); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/incomuns/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
+        <h2>Montes de Cartas</h2>
+        <div>
+            <h3>Comuns</h3>
+            <p>Quantidade: <?php echo $comuns; ?></p>
+            <?php
+            // Exibe as cartas comuns do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 5) == "comum") {
+                    $card_number = substr($carta, 5); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/comuns/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
+            ?>
 
-        <h3>Raras</h3>
-        <p>Quantidade: <?php echo $raras; ?></p>
-        <?php
-        // Exibe as cartas raras do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 4) == "rara") {
-                $card_number = substr($carta, 4); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/rara/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
+            <h3>Incomuns</h3>
+            <p>Quantidade: <?php echo $incomuns; ?></p>
+            <?php
+            // Exibe as cartas incomuns do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 8) == "incomum") {
+                    $card_number = substr($carta, 8); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/incomuns/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
+            ?>
 
-        <h3>Épicas</h3>
-        <p>Quantidade: <?php echo $epicas; ?></p>
-        <?php
-        // Exibe as cartas épicas do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 5) == "epica") {
-                $card_number = substr($carta, 5); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/epica/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
+            <h3>Raras</h3>
+            <p>Quantidade: <?php echo $raras; ?></p>
+            <?php
+            // Exibe as cartas raras do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 4) == "rara") {
+                    $card_number = substr($carta, 4); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/rara/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
+            ?>
 
-        <h3>Lendárias</h3>
-        <p>Quantidade: <?php echo $lendarias; ?></p>
-        <?php
-        // Exibe as cartas lendárias do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 8) == "lendaria") {
-                $card_number = substr($carta, 8); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/lendaria/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
+            <h3>Épicas</h3>
+            <p>Quantidade: <?php echo $epicas; ?></p>
+            <?php
+            // Exibe as cartas épicas do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 5) == "epica") {
+                    $card_number = substr($carta, 5); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/epica/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
+            ?>
 
-        <h3>Míticas</h3>
-        <p>Quantidade: <?php echo $miticas; ?></p>
-        <?php
-        // Exibe as cartas míticas do usuário
-        foreach ($cartas_usuario as $carta => $quantidade) {
-            if (substr($carta, 0, 6) == "mitica") {
-                $card_number = substr($carta, 6); // Extrai o número da carta
-                echo "<div class='cartao'>";
-                echo "<iframe src='../cards/mitica/$card_number.html'></iframe>";
-                echo "<p>Quantidade: $quantidade</p>";
-                echo "</div>";
+            <h3>Lendárias</h3>
+            <p>Quantidade: <?php echo $lendarias; ?></p>
+            <?php
+            // Exibe as cartas lendárias do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 8) == "lendaria") {
+                    $card_number = substr($carta, 8); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/lendaria/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
-    </div>
+            ?>
+
+            <h3>Míticas</h3>
+            <p>Quantidade: <?php echo $miticas; ?></p>
+            <?php
+            // Exibe as cartas míticas do usuário
+            foreach ($cartas_usuario as $carta => $quantidade) {
+                if (substr($carta, 0, 6) == "mitica") {
+                    $card_number = substr($carta, 6); // Extrai o número da carta
+                    echo "<div class='cartao'>";
+                    echo "<iframe src='../cards/mitica/$card_number.html'></iframe>";
+                    echo "<p>Quantidade: $quantidade</p>";
+                    echo "</div>";
+                }
+            }
+            ?>
+        </div>
+    </main>
 </body>
 
 </html>

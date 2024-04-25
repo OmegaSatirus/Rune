@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_css/style.css">
     <title>Login de Usuário</title>
 </head>
+
 <body>
-    <h1>Login de Usuário</h1>
-    <form action="./PHP/login.php" method="POST">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Senha:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Login</button>
-    </form>
+    <header class="AlinhadoArd FlexH">
+        <div>
+          <a href="./jogos.html"><img Id="logo" src="_assests/league-of-legends.svg" alt="Logo League of Legends" /></a>
+        </div>
+        <div>
+          <a href="./cards.html">Cards</a>
+        </div>
+        <div>
+          <a href="./maiscards.html">+ cards</a>
+        </div>
+        <div>
+          <a href="./PHP/cartas_usuario.php">Meus Cards</a>
+        </div>
+        <div>
+          <a href="./PHP/perfil.php">perfil</a>
+        </div>
+      </header>
+    <main class="AlinhadoArd FlexV">
+
+        <h1>Login de Usuário</h1>
+        <form action="./PHP/login.php" method="POST">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <div class="FlexH AlinhadoArd">
+                <button type="submit">Login</button>
+                <a class="fakebutton" href="./register.html"> Registro</a>
+            </div>
+        </form>
+    </main>
 </body>
+
 </html>

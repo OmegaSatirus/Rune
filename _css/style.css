@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,12 +8,15 @@
 
 /* Formatação header */
 
+body{
+    background: linear-gradient(45deg , rgb(190, 230, 255) 0%, rgb(255, 244, 182)100%);
+}
 
 header {
     top: 0;
     width: 100vw;
     height: 10vh;
-    background-color: #D7DAE5;
+    background-color: #a4edff;
     border-color: #83A0A0;
     border-style: solid;
     border-width: 3px;
@@ -66,7 +70,11 @@ color: #76b100;
 .ul-card {
     border: solid transparent 3px;
     width: 20vw;
+    display: flex;
+    justify-content: center;
     height: 73vh ;
+    min-width: 300px;
+    min-height: 700px;
     border-radius: 32px;
     overflow: hidden;
     transition: all .5s ease-out;
@@ -117,6 +125,12 @@ color: #76b100;
     align-items: center;
     display: flex;
     text-align: center;
+}
+.AlinhadoCenJust {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: justify;
 }
 
 .AlinhadoDir {
@@ -201,13 +215,167 @@ color: #76b100;
     margin: 0 5px;
 }
 
-iframe{
-    width: 15vw;
-    height: 40vh;
-    border: 1px solid red;
-    transform-origin: top left;
-}
 
 .hidden {
     display: none;
+}
+
+.cartao {
+    display: inline-block;
+    margin: 10px;
+}
+
+.cartao iframe {
+    width: 200px;
+    margin: 1.5vw;
+    border-radius: 8px;
+    height: 300px;
+    border: 2px solid #6d6d6d;
+}
+
+* button{
+    padding: .5vh .5vw;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+* button:hover{
+    padding: .5vh .5vw;
+    border-radius: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: #6d6d6d;
+}
+
+
+.main-content-section-bigimage {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 64px;
+}
+
+.main-content-section-bigimage img {
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    margin: 0 auto 5px;
+}
+
+.main-content-section-name h2 {
+    font-size: 40pt;
+    margin: -5px 0;
+    border-radius: 0px 0px 8px 8px;
+
+
+}
+
+.main-content-section-bio-article {
+    padding: 3% 2%;
+    font-size: 22pt;
+    margin-bottom: -40px;
+}
+
+.bio-specs {
+    font-size: 22pt;
+
+}
+
+/* Configuração de um Semi-grid */
+.bio-specs {
+    display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: .25%;
+}
+
+.row-1-4 {
+    padding: 2%;
+    margin: auto;
+    width: 24.80%;
+    border: 5px solid #C2F261;
+    border-radius: 8px;
+}
+
+.Gamemode{
+    width: 80vw;
+    margin: 2.5vh auto;
+    color: white;
+    background-color: #565656;
+    padding: 2vh 1vw;
+    border-radius: 16px;
+}
+
+.Gamemode ul,ol{
+    list-style: none;
+
+}
+.Gamemode:nth-child(5){
+    margin-left: 30%;
+    width: calc(80vw - 30%);
+}
+.Gamemode:nth-child(4){
+    width: calc(80vw - 30%);
+    margin-right: 30%;
+}
+.Gamemode:nth-child(6){
+    height: 15vh;
+    font-size: 15pt;
+}
+
+@media screen and (max-width:390px){
+    .ul-card{
+        height: 400px;
+        min-height: 400px;
+    }
+    #logo{
+        display: none;
+    }
+    header{
+        width: 100%;
+    }
+    header a{
+        font-size: 11pt;
+    }
+    header div:nth-child(2),
+    header div:nth-child(3)
+    header:nth-child(4){
+        display: none;
+    }
+    .main-content-section-bigimage {
+        width: 100%;
+        height: 100%;
+        margin: 5px;
+        border-radius: 64px;
+    }
+
+    #Final p{
+        font-size: 100pt ;
+    }
+    .main-content-section-bigimage h2{
+        font-size: 19pt;
+    }
+
+    .main-content-section-bio-article p{
+        font-size: 15pt;
+        text-align: justify;
+    }
+    .bio-specs {
+        display: flex;
+        width: 98%;
+        flex-wrap: wrap;
+        flex-direction: column ;
+        margin: 2vh;
+        justify-content: space-around;
+        gap: 1vh;
+    }
+    .row-1-4 {
+        padding: 2%;
+        margin: auto;
+        width: auto;
+        border: 5px solid #C2F261;
+        border-radius: 8px;
+    }
 }

@@ -1,0 +1,185 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Baús</title>
+        <link rel="stylesheet" href="./_css/style.css">
+        <style>
+            .carousel-container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .carousel-slide {
+                display: flex;
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            .carousel-item {
+                width: 100%;
+                flex: 0 0 auto;
+            }
+
+            .carousel-item img{
+                width: 100%;
+                height: 80vh;
+            }
+            .carousel-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                outline: none;
+                font-size: 1.2em;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="AlinhadoArd FlexH">
+            <div>
+              <a href="./jogos.html"><img Id="logo" src="_assests/league-of-legends.svg" alt="Logo League of Legends" /></a>
+            </div>
+            <div>
+              <a href="./cards.html">Cards</a>
+            </div>
+            <div>
+              <a href="./maiscards.html">+ cards</a>
+            </div>
+            <div>
+              <a href="./PHP/cartas_usuario.php">Meus Cards</a>
+            </div>
+            <div>
+              <a href="./PHP/perfil.php">perfil</a>
+            </div>
+          </header>
+        <main class="main-content-section">
+            <section class="FlexV Gamemode AlinhadoCenJust">
+                <h1>Bem-Vindo a Rune!</h1>
+                <p>Rune consiste em um jogo de cartas baseadas no universo de League Of Legends.</p>
+                <p>O jogo consiste em um mix de estratégia e sorte, onde os jogadores terão que batalhar pela posse de
+                    suas
+                    cartas.</p>
+            </section>
+            <section class="FlexV Gamemode AlinhadoCenJust">
+                <h2>Regras do Jogo</h2>
+                <ul>
+                    <li class="AlinhadiCenJust">Ambos os jogadores começam com 3 pontos e 1 deck, que serão perdidos a
+                        cada
+                        turno. Aquele que perder todas as suas vidas perde suas cartas e é eliminado.</li>
+                    <li><strong>Turnos:</strong> Os turnos consistem em 3 cartas de cada jogador viradas de cabeça para
+                        baixo que vão sendo mostradas da esquerda para direita sendo enfrentadas pela carta da frente.
+                    </li>
+                    <li><strong>Deck:</strong> O Deck são as 12 cartas que jogador escolhe antes de entrar em batalha.
+                    </li>
+                </ul>
+            </section>
+            <section class="Gamemode AlinhadoCen FlexV" >
+                <h2>TABULEIROS</h2>
+                <br>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <div class="carousel-item"><img src="./_imagens/Ionia_Arena.jpg" alt="Imagem 1"></div>
+                        <div class="carousel-item"><img src="./_imagens/Avarosa_Arena.jpg" alt="Imagem 2"></div>
+                        <div class="carousel-item"><img src="./_imagens/Bloodmoon_Arena.jpg" alt="Imagem 3"></div>
+                        <div class="carousel-item"><img src="./_imagens/SG_Park_Arena.jpg" alt="Imagem 4"></div>
+                        <div class="carousel-item"><img src="./_imagens/Bilgewater_Arena.jpg" alt="Imagem 5"></div>
+                        <div class="carousel-item"><img src="./_imagens/Frost_Guard_Arena (1).jpg" alt="Imagem 6"></div>
+                        <div class="carousel-item"><img src="./_imagens/Frost_Guard_Arena.jpg" alt="Imagem 7"></div>
+
+                    </div>
+                    <button class="carousel-button prev" onclick="prevSlide()">Anterior</button>
+                    <button class="carousel-button next" onclick="nextSlide()">Próximo</button>
+                </div>
+            </section>
+            <section class="FlexV Gamemode AlinhadoCenJust">
+                <h2>Condições de Vitória</h2>
+                <ol class="AlinhadoCen FlexV">
+                    <br>
+                    <li><strong>1° Região X Região:</strong> <br> As regiões nem sempre são rivais, mas aqui elas são.
+                        Seguindo o círculo abaixo, você vence das duas regiões à frente. <br>Por exemplo: <br>
+                        Demacia(DEM)
+                        > Ionia(ION) e Ixtal(IXT).</li>
+                    <img src="./_assests/CirculoCidade.png" alt="">
+                    <br>
+                    <li><strong>2° Raça X Raça:</strong> <br> Sabemos que as raças têm pontos fortes e pontos fracos.
+                        Aqui
+                        veremos eles. Seguindo o círculo abaixo, a carta de raça vence das duas raças à frente. <br>Por
+                        exemplo: <br> Brutamontes(BRU) > Vastayas(VAS) e Aprimorados(APR).</li>
+                    <img src="./_assests/CirculoRaca.png" alt="">
+                    <br>
+                    <li><strong>3° Raridade:</strong> <br>Caso vocês ainda não tenham conseguido ganhar da carta
+                        oponente, a
+                        vitória será dada a quem tiver a carta com maior raridade.</li><br>
+                </ol>
+            </section>
+            <section class="FlexV Gamemode AlinhadoCenJust">
+                <h2>Modos de Jogo</h2>
+                <ul>
+                    <li><strong>Casual:</strong> É jogado por 2 jogadores com 1 deck e 5 pontos. <br> Recompensa: <br> X
+                        quantidade de ouro.</li>
+                    <li><strong>Ranked:</strong> É jogado por 2 jogadores com 3 decks e 15 pontos (sendo que podemos
+                        escolher 1 deck a cada 5 pontos de vida). <br> Recompensa: <br> Valor de Ouro dos dois
+                        participantes
+                        e pacote de figurinha randômico.</li>
+                    <li><strong>Morte-Subita:</strong> É jogado por 2 jogadores com 1 deck e 5 pontos. <br> Recompensa:
+                        <br>
+                        Cartas do oponente e Y quantidade de ouro.</li>
+                </ul>
+            </section>
+            <section id="Final" class="FlexV Gamemode AlinhadoCenJust">
+                <p>Porém, temos que contar uma coisa... Por mais que todos nós queiramos estar gastando o nosso tempo
+                    com
+                    isso, ainda está em desenvolvimento.</p>
+                <p>Mas desde já, seja bem-vindo ao Rune!</p>
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            let slideIndex = 0;
+            showSlide(slideIndex);
+
+            function prevSlide() {
+                showSlide(slideIndex -= 1);
+            }
+
+            function nextSlide() {
+                showSlide(slideIndex += 1);
+            }
+
+            function showSlide(n) {
+                const slides = document.querySelectorAll('.carousel-item');
+                if (n >= slides.length) {
+                    slideIndex = 0;
+                }
+                if (n < 0) {
+                    slideIndex = slides.length - 1;
+                }
+                const offset = -slideIndex * 100; // Mover o carrossel para a posição correta
+                document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
+            }
+        </script>
+
+    </body>
+
+    </html>

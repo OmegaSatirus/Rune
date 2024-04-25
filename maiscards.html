@@ -7,75 +7,90 @@
     <title>Sistema de Baús</title>
     <link rel="stylesheet" href="./_css/style.css">
     <style>
+        .cartao {
+            display: inline-block;
+            margin: 10px;
+        }
 
+        .cartao iframe {
+            width: 200px;
+            height: 300px;
+        }
     </style>
 </head>
 
 <body>
     <header class="AlinhadoArd FlexH">
         <div>
-            <a href="./cards.html">Cards</a>
+          <a href="./jogos.html"><img Id="logo" src="_assests/league-of-legends.svg" alt="Logo League of Legends" /></a>
         </div>
         <div>
-            <a href="./jogos.html">+ moeadas</a>
+          <a href="./cards.html">Cards</a>
         </div>
         <div>
-            <a href="./index.html"><img Id="logo" src="_assests/league-of-legends.svg"
-                    alt="Logo League of Legends" /></a>
+          <a href="./maiscards.html">+ cards</a>
         </div>
         <div>
-            <a href="./perfil.html">perfil</a>
+          <a href="./PHP/cartas_usuario.php">Meus Cards</a>
         </div>
         <div>
-            <a href="./MyCards.html">Meus Cards</a>
+          <a href="./PHP/perfil.php">perfil</a>
         </div>
-    </header>
-    <main class="AlinhadoArd FlexV">
+      </header>
+    <main class="AlinhadoCen FlexV main-content-section">
         <div class="FlexH">
-            <div>
-                
+            <div class="FlexV">
+                <img src="" alt="">
             </div>
             <div>
-                
+
             </div>
         </div>
         <div class="container AlinhadoCen">
             <div class="chest" data-id="comum">
-                Baú Comum (5 cartas, máximo raro)
+                Pacote Comum <br> (5 cartas, máximo raro)
                 <div class="options">
-                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício')">Dinheiro Fictício</button>
-                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
-                        Comprado</button>
+                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício')">Comprar com Essencisa Azul</button>
+                    <button onclick="confirmAndOpenChest('comum', 'Dinheiro Fictício Comprado')">Comprar com Dark Metter</button>
                 </div>
             </div>
             <div class="chest" data-id="epico">
-                Baú Épico (8 cartas, máximo épico)
+                Pacote Epico <br> (8 cartas, máximo épico)
                 <div class="options">
-                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício')">Dinheiro Fictício</button>
-                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
-                        Comprado</button>
+                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício')">Comprar com Essencisa Azul</button>
+                    <button onclick="confirmAndOpenChest('epico', 'Dinheiro Fictício Comprado')">Comprar com Dark Metter</button>
                 </div>
             </div>
             <div class="chest" data-id="lendario">
-                Baú Lendário (15 cartas, sem raridade máxima)
+                Pacote Lendário <br>     (15 cartas, sem raridade máxima)
                 <div class="options">
-                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício')">Dinheiro Fictício</button>
-                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício Comprado')">Dinheiro Fictício
-                        Comprado</button>
+                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício')">Comprar com Essencisa Azul</button>
+                    <button onclick="confirmAndOpenChest('lendario', 'Dinheiro Fictício Comprado')">Comprar com Dark Metter</button>
                 </div>
             </div>
         </div>
         <div class="FlexH AlinhadoArd">
             <div class="cartas-recebidas AlinhadoCen FlexV">
                 <h2>Cartas Recebidas:</h2>
-                <div id="comum-cards" class="hidden"></div>
-                <div id="epico-cards" class="hidden"></div>
-                <div id="lendario-cards" class="hidden"></div>
+                <!-- Botão de enviar formulário -->
+                <button onclick="submitCardForm()">Guardar estas Cartas</button>
+                <div id="comum-cards" class="hidden FlexH AlinhadiArd cartao"></div>
+                <div id="epico-cards" class="hidden FlexH AlinhadiArd cartao"></div>
+                <div id="lendario-cards" class="hidden FlexH AlinhadiArd cartao"></div>
+
             </div>
         </div>
     </main>
     <footer>
-
+        <!-- Formulário oculto para enviar as cartas recebidas -->
+        <form id="cartas-form" action="./PHP/processar_cartas.php" method="post">
+            <input type="hidden" id="cartas-comum" name="cartas-comum">
+            <input type="hidden" id="cartas-incomum" name="cartas-incomum">
+            <input type="hidden" id="cartas-rara" name="cartas-rara">
+            <input type="hidden" id="cartas-epico" name="cartas-epico">
+            <input type="hidden" id="cartas-lendaria" name="cartas-lendaria">
+            <input type="hidden" id="cartas-mitica" name="cartas-mitica">
+        </form>
     </footer>
     <script>
         function confirmAndOpenChest(bauType, moneyType) {
@@ -132,11 +147,26 @@
                 }
 
                 const iframe = document.createElement('iframe');
-                const maxCardNumber = getMaxCardNumber(rarity);
-                const randomCardNumber = Math.floor(Math.random() * maxCardNumber);
+                let randomCardNumber;
+                if (rarity === 'mitica') {
+                    randomCardNumber = 0; // Apenas 1 carta mítica disponível
+                } else {
+                    const maxCardNumber = getMaxCardNumber(rarity);
+                    randomCardNumber = Math.floor(Math.random() * maxCardNumber);
+                }
                 iframe.src = `./cards/${rarity}/${randomCardNumber}.html`;
+
+                // Adiciona as classes aos elementos <iframe>
                 cardDiv.appendChild(iframe);
             }
+
+            // Atualize os valores do formulário
+            document.getElementById('cartas-comum').value = numCards;
+            document.getElementById('cartas-incomum').value = numCards;
+            document.getElementById('cartas-rara').value = numCards;
+            document.getElementById('cartas-epico').value = numCards;
+            document.getElementById('cartas-lendaria').value = numCards;
+            document.getElementById('cartas-mitica').value = hasMythical ? 1 : 0;
         }
 
         function getMaxCardNumber(rarity) {
@@ -163,6 +193,11 @@
             chests.forEach(chest => {
                 chest.classList.add('hidden');
             });
+        }
+
+        function submitCardForm() {
+            // Envie o formulário manualmente
+            document.getElementById('cartas-form').submit();
         }
     </script>
 </body>

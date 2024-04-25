@@ -14,7 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_SESSION['user_id']; // ID do usuário obtido da sessão
     $cartasComum = $_POST['cartas-comum'];
     $cartasEpico = $_POST['cartas-epico'];
-    $cartasLendario = $_POST['cartas-lendario'];
+    $cartasRara = $_POST['cartas-rara'];
+    $cartasMitica = $_POST['cartas-mitica'];
+    $cartasIncomum = $_POST['cartas-incomum'];
+    $cartasLendario = $_POST['cartas-lendaria'];
 
     // Cria a conexão
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -52,16 +55,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
     }
 
+    // Insere as cartas Incomum
+    $rarity = "incomum";
+    for ($i = 0; $i < $cartasIncomum; $i++) {
+        $card_number = rand(0, 2);
+        $quantity = 1;
+        $stmt->execute();
+    }
+
+    // Insere as cartas rara
+    $rarity = "rara";
+    for ($i = 0; $i < $cartasRara; $i++) {
+        $card_number = rand(0, 2);
+        $quantity = 1;
+        $stmt->execute();
+    }
+    // Insere as cartas mititca
+    $rarity = "mitica";
+    for ($i = 0; $i < $cartasMitica; $i++) {
+        $card_number = rand(0, 2);
+        $quantity = 1;
+        $stmt->execute();
+    }
+
     // Fecha a conexão e a declaração
     $stmt->close();
     $conn->close();
 
     // Redireciona de volta para a página maiscards.html
-    header("Location: ../testes.html");
+    header("Location: ../maiscards.html");
     exit();
 } else {
     // Se o formulário não foi submetido corretamente, redirecione para a página de origem
-    header("Location: ../testes.html");
+    header("Location: ../maiscards.html");
     exit();
 }
 ?>

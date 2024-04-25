@@ -45,15 +45,40 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="../_css/style.css">
 </head>
+
 <body>
-    <h1>Perfil do Usuário</h1>
-    <p>Bem-vindo, <?php echo $username; ?>!</p>
-    <p>Seu email é: <?php echo $email; ?></p>
-    <p><a href="./logout.php">Sair</a></p>
+<header class="AlinhadoArd FlexH">
+    <div>
+      <a href="../jogos.html"><img Id="logo" src="../_assests/league-of-legends.svg" alt="Logo League of Legends" /></a>
+    </div>
+    <div>
+      <a href="../cards.html">Cards</a>
+    </div>
+    <div>
+      <a href="../maiscards.html">+ cards</a>
+    </div>
+    <div>
+      <a href="../PHP/cartas_usuario.php">Meus Cards</a>
+    </div>
+    <div>
+      <a href="../PHP/perfil.php">perfil</a>
+    </div>
+  </header>
+    <main class="AlinhadoCen FlexV main-content-section">
+        <div class="Gamemode">
+            <h1>Perfil do Usuário</h1>
+            <p>Bem-vindo, <?php echo $username; ?>!</p>
+            <p>Seu email é: <?php echo $email; ?></p>
+            <p><a href="./logout.php">Sair</a></p>
+        </div>
+    </main>
 </body>
+
 </html>
