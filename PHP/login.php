@@ -30,7 +30,7 @@ if ($result->num_rows == 1) { // Se encontrou um usuário com o e-mail
     if (password_verify($password, $user['password'])) { // Verifica a senha
         // Login bem-sucedido: Iniciar a sessão e redirecionar
         $_SESSION['user_id'] = $user['id'];
-        header("Location: ../index.html"); // Redireciona para a página inicial
+        header("Location: ../jogos.html"); // Redireciona para a página inicial
         exit();
     } else {
         echo "Senha incorreta";
